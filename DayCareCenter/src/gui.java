@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 public class gui 
@@ -67,20 +68,29 @@ public class gui
 	protected JPanel makeChildPanel(JPanel panel, GridBagLayout gridbag,GridBagConstraints c,int column, int row)//makes a panel and places it inside a "parent" panel 
 	{
 		JPanel thisPanel = new JPanel();
+		LayoutManager parentLayout = panel.getLayout();
         gridbag.setConstraints(thisPanel, c);
         c.gridx = column;
         c.gridy = row;
         panel.add(thisPanel,c);
+        thisPanel.setLayout(parentLayout);
         return thisPanel;
 	}
 	
-	protected JPanel makeParentPanel(JFrame frame, GridBagLayout gridbag,GridBagConstraints c,int column, int row) //makes a panel which will contain other panels
+	protected JPanel makeParentPanel(JFrame frame, GridBagLayout gridbag,GridBagConstraints c,boolean gridbaglayout, int column, int row, String orientation) //makes a panel which will contain other panels
 	{
 		JPanel thisPanel = new JPanel();
-        gridbag.setConstraints(thisPanel, c);
-        c.gridx = column;
-        c.gridy = row;
-        frame.add(thisPanel, c);
+		if (gridbaglayout==true)
+		{
+			gridbag.setConstraints(thisPanel, c);
+	        c.gridx = column;
+	        c.gridy = row;
+	        frame.add(thisPanel, c);
+		}
+		else{
+			frame.add(thisPanel, orientation);
+		}
+		thisPanel.setLayout(gridbag);
         return thisPanel;
 	}
 	
@@ -106,19 +116,36 @@ public class gui
 		return image;
 	}
 	
-	public void addPanel2Frame(JPanel panel,JFrame frame, String orientation)//orientation is a BorderLayout constant
+	protected JTable makeTable (int numColumns, int numRows, JPanel panel, GridBagLayout gridbag,GridBagConstraints c,int column,int row)
+	{// Table method
+		JTable table = new JTable(numRows,numColumns);		
+		gridbag.setConstraints(table, c);
+		c.gridx = column;
+		c.gridy = row;
+		panel.add(table,c);
+		return table;
+	}
+	
+	public void addPanel2Frame(JPanel panel,JFrame frame, Object orientation)//orientation is a BorderLayout constant
 	{
 		frame.add(panel,orientation);
 	}
-		
-	public void init(LayoutManager layout, JFrame frame, int width, int height)  
+	
+	public void frameInit(LayoutManager layout, JFrame frame, int width, int height)
 	{
 		// setting up frame
 		//frame = new JFrame (winName);
-		frame.setLayout(layout);
-		frame.setLocationRelativeTo(null);			
+		if (layout != null)//layout set to null if frame's layout manager already set
+		{
+			frame.setLayout(layout);
+		}
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(width, height);
+	}
+	
+	public void init(JFrame frame)  
+	{
 		frame.pack();
 		frame.setVisible(true);
 	}
