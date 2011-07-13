@@ -1,0 +1,17 @@
+mysql -h localhost -u root -p
+
+create database childcare;
+use childcare;
+create table childInfo (childID int, fName text, mName text, lName text, fatherID text, mother text, daysAtt int, billBal decimal, age float, weight float, height float, dateOfBirth DATE, EmergencyContact text, authorizedParty text,authorizedPart2 text, authorizedParty3 text, address text, hairColor int, eyeColor int, race int, religion int, comments text, specialNeeds text, branchID int, activeStatus int);
+create table clients (clientID int,fName text,mName text,Lname text, phoneNum text, address text,comment text);
+create table child_allergies (id int,child_id int, allergie_id int);
+create table medical_conditions (condition_id int, condition_type text, treatment text,conditionName text, conditionDesc text);
+create table pricing (price_id int, NumDays int, priceWeek decimal, billing_fee decimal, lateFee decimal);
+create table attendance (record_id int,child_id int,check_in_dt date,check_out_dt date);
+create table user (userid int, fName text, mName text,lName text,date_of_birth date, phoneNum text, email text, password text, emp_position_id int);
+create table emp_pos (Owner int, districtManager int, AssManager int, other int);
+create table branch (BranchName text, address text, phoneNum text);
+create table haircolor (brown int(1), blonde int(2), black int(3), Auburn int(4),red int(5));
+create table eyecolor (brown int(1), blue int(2),green int(3),hazel int(4));
+create table race (african_american int(1),caucasian int(2),asian int(3),puerto_rican int(4), mexican int(5), other int(6));
+create table religion (christianity int(1), mormonism int(2), athesim int(3),buddhism int(4), islam int(5), other int(6));
