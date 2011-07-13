@@ -1,4 +1,4 @@
-#Fri Jul 01 08:32:00 EDT 2011
+#Fri Jul 01 09:29:16 EDT 2011
 java_doc_default=125,140,147
 java_doc_link=103,140,177
 org.eclipse.wst.jsdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
@@ -25,7 +25,7 @@ semanticHighlighting.methodDeclarationName.enabled=true
 semanticHighlighting.deprecatedMember.color=220,220,204
 java_operator=232,226,183
 java_keyword_return=142,196,111
-org.eclipse.jface.textfont=1|Consolas|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.jface.textfont=1|Monospace|10.0|0|GTK|1|;
 org.eclipse.wst.jsdt.ui.editor.tab.width=
 tabWidthPropagated=true
 semanticHighlighting.objectInitializer.enabled=true

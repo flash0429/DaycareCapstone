@@ -8,3 +8,23 @@ Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.pa
 
 !ENTRY org.eclipse.epp.usagedata.recording 1 0 2011-07-01 08:29:42.217
 !MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 6255 milliseconds.
+!SESSION 2011-07-01 18:58:13.146 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product -data /home/thakidd/Workspace/DaycareCapstone -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2011-07-01 18:58:34.180
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 1888 milliseconds.
+!SESSION 2011-07-09 23:43:45.328 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.epp.usagedata.recording 1 0 2011-07-09 23:44:32.185
+!MESSAGE Usage data uploaded to http://udc.eclipse.org/upload.php in 2674 milliseconds.

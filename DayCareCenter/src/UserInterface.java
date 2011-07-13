@@ -27,7 +27,7 @@ public class UserInterface {
 		//create frame
 		JFrame frame = new JFrame();
 		frame.setBackground(Color.yellow);
-		gui.frameInit(new BorderLayout(), frame, 800, 600);
+		gui.frameInit(new BorderLayout(), frame, 1024, 768);
 		//create container panel
 		c.fill = GridBagConstraints.HORIZONTAL;
 		JPanel containerPanel = gui.makeParentPanel(frame, layout, c, false, 0, 0, BorderLayout.EAST);
